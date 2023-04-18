@@ -1,8 +1,8 @@
-<div class="container mt-5" *ngFor="let product of products">
-    <div class="row align-items-start">
-      <div class="col col-md-auto">
+<div class="container mt-5 d-flex justify-content-sm-center " *ngFor="let product of products">
+    <div class="row">
+      <div class="col-4">
         <div class="card p-3 text-center" style="width: 20rem;">
-            <img class="card-img-top" src={{product.image}} alt="...">
+            <img class="card-img-top img-thumbnail" src={{product.image}} alt="...">
             <div class="card-body">
               <h5 class="card-title">{{product.title}}</h5>
               <p class="card-text">{{product.description}}</p>
