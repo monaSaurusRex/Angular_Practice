@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FakestoreService } from 'src/app/services/fakestore.service';
 import { Router } from '@angular/router';
+import { Product } from 'src/app/interfaces/product';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit{
 
   constructor(private fakestore:FakestoreService, private router:Router){} //inject the service you want to use
 
-  products:any[]=[]; //values that you will be using 
+  products:Product[]=[]; //values that you will be using 
   //products:Product[] = []; 
 
   ngOnInit(){

@@ -1,13 +1,13 @@
 export interface Product {
-    "id": Number,
-    "title": String,
-    "price": Number,
-    "description": String,
-    "category": String,
-    "image": String,
+    "id": number,
+    "title": string,
+    "price": number,
+    "description": string,
+    "category": string,
+    "image": string,
     "rating": {
-      "rate": Number
-      "count": Number
+      "rate": number
+      "count": number
     }
 
 }

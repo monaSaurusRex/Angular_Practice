@@ -1,23 +1,36 @@
-<h1>Product List</h1>
+<div class="container">
+  <h1>Product List</h1>
 
-<div>
-  <a href="#" routerLink="../create" class="btn btn-primary" (click)="goToCreate()">Create a product</a>
-</div>
+  <div>
+    <a href="#" routerLink="../create" class="btn btn-primary" (click)="goToCreate()">Create a product</a>
+  </div>
 
-<div class="container mt-5 d-flex justify-content-sm-center " *ngFor="let product of products">
-  <div class="row">
-    <div class="col-4">
-      <div class="card p-3 text-center" style="width: 20rem;">
-        <img class="card-img-top img-thumbnail" src={{product.image}} alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{product.title}}</h5>
-          <p class="card-text">{{product.description}}</p>
-          <a href="#" class="btn btn-primary">View</a>
+  <!-- <div class="container mt-5 d-flex justify-content-sm-center " *ngFor="let product of products">
+    <div class="row">
+      <div class="col-4">
+        <div class="card p-3 text-center" style="width: 20rem;">
+          <img class="card-img-top img-thumbnail" src={{product.image}} alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{product.title}}</h5>
+            <p class="card-text">{{product.description}}</p>
+            <a href="#" class="btn btn-primary">View</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+<!-- "id": 1,
+    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "price": 109.95,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "rating": {
+      "rate": 3.9,
+      "count": 120 -->
+
 
 
 <table class="table">
@@ -25,29 +38,21 @@
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Title</th>
+      <th scope="col">Price</th>
       <th scope="col">Description</th>
-      <th scope="col">Handle</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Category</th>
+      <th scope="col">Rating</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+    <tr *ngFor="let product of products">
+      <th scope="row" >{{product.id}}</th>
+      <td>{{product.title}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.description}}</td>
+      <td>{{product.category}}</td>
+      <td>{{product.rating.rate}}</td>
+      <!-- <td><a href="#" routerLink="../edit" class="btn btn-primary" (click)="goToEdit()"></a></td> -->
     </tr>
   </tbody>
 </table>
