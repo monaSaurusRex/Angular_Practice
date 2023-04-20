@@ -1,7 +1,7 @@
 <h1>Product List</h1>
 
 <div>
-  <a href="#" class="btn btn-primary" (click)="goToCreate()">Create a product</a>
+  <a href="#" routerLink="../create" class="btn btn-primary" (click)="goToCreate()">Create a product</a>
 </div>
 
 <div class="container mt-5 d-flex justify-content-sm-center " *ngFor="let product of products">
